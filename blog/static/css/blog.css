@@ -1,0 +1,30 @@
+h {
+  font-family:'Pacifico';
+  font-size:20pt;
+   color: #ffffff;
+}
+p {
+   padding-left:20px;
+
+
+}
+
+.page_header{
+
+   background-color: #ff9400;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+
+}
+
+.content {
+    margin-left: 40px;
+}
+
+
+h1 {
+  color:#FCA205;
+  padding:15px;
+  font-family:'Lobster';
+  text-decoration:underline;
+}

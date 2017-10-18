@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div  class="page_header">
+
+    <h >JACOBINS BLOG</h>
+        </div>
+
+   {% for post in posts %}
+
+    <h1><a href="{% url 'blog:post_details' pk=post.pk %}">{{ post.title }}</a></h1>
+   <p>{{ post.text |linebreaksbr }}</p>
+     {% endfor %}
+
+    <button onclick= "{% url 'blog:post_new' %}"> ADD POST</button>
+
+
+</body>
+</html>
